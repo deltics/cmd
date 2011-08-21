@@ -1,0 +1,7 @@
+    1 CAT_Installation            Installation
+      CAT_Server_Startup          Server Startup
+      CAT_Server_Shutdown         Server Shutdown
+.
+  100 MSG_General                 %s
+
+ 1000 MSG_CommandLineIncomplete   Invalid command line.  %s (%s) has not been specified.
