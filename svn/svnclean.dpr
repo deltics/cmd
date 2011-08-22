@@ -57,12 +57,28 @@ program svnclean;
             CleanFolder(aPath + '\' + rec.Name);
         end;
       until FindNext(rec) <> 0;
+
     finally
       SysUtils.FindClose(rec);
     end;
   end;
 
 
+var
+  path: String;
 begin
-  CleanFolder(GetCurrentDir);
+  if (ParamCount > 0) then
+  begin
+    path :=  GetCurrentDir + '\' + ParamStr(1);
+
+    if NOT DirectoryExists(path) then
+    begin
+      WriteLn('''' + path + ''' is not a valid folder path');
+      EXIT;
+    end;
+  end
+  else
+    path := GetCurrentDir;
+
+  CleanFolder(path);
 end.

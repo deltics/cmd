@@ -20,12 +20,11 @@
 			<Base>true</Base>
 		</PropertyGroup>
 		<PropertyGroup Condition="'$(Base)'!=''">
-			<DCC_DependencyCheckOutputName>c:\belfry\vendorprep.exe</DCC_DependencyCheckOutputName>
+			<DCC_DependencyCheckOutputName>vendorprep.exe</DCC_DependencyCheckOutputName>
 			<DCC_ImageBase>00400000</DCC_ImageBase>
 			<DCC_UsePackage>vcl;rtl;vclx;dbrtl;vcldb;adortl;dbxcds;dbexpress;vclib;ibxpress;xmlrtl;vclactnband;inet;IntrawebDB_80_100;Intraweb_80_100;vclie;inetdbbde;inetdbxpress;dclOfficeXP;VclSmp;soaprtl;dsnap;bdertl;teeui;teedb;tee;vcldbx;dsnapcon;websnap;webdsnap;dxCoreD10;dxGDIPlusD10;cxLibraryD10;dxBarD10;dxComnD10;dxBarDBNavD10;dxBarExtDBItemsD10;dxBarExtItemsD10;dxsbD10;cxEditorsD10;dxThemeD10;cxDataD10;cxExtEditorsD10;cxPageControlD10;cxGridD10;cxTreeListD10;dxmdsD10;dxDockingD10;dxdbtrD10;dxtrmdD10;dxorgcD10;dxdborD10;sbridge100;madBasic_;madDisAsm_;madExcept_;dclRBBDE1010;rbDBDE1010;rbBDE1010;rbRCL1010;rbDAD1010;rbDB1010;dclRBADO1010;rbADO1010;dclRBDBE1010;rbDBE1010;dclRBIBE1010;rbIBE1010;RemObjects_WebBroker_D10;RemObjects_RODX_D10;RemObjects_BPDX_D10;PascalScript_RO_D10;RemObjects_Indy_D10;IndyProtocols100;IndySystem100;IndyCore100;xformat10;xdevice10;SynEdit_R2006</DCC_UsePackage>
 			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
 			<DCC_Platform>x86</DCC_Platform>
-			<DCC_ExeOutput>c:\belfry</DCC_ExeOutput>
 			<DCC_K>false</DCC_K>
 			<DCC_N>true</DCC_N>
 			<DCC_S>false</DCC_S>
@@ -72,6 +71,8 @@
 						<Parameters Name="UseLauncher">False</Parameters>
 						<Parameters Name="LoadAllSymbols">True</Parameters>
 						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+						<Parameters Name="RunParams">deltics\libs</Parameters>
+						<Parameters Name="DebugCWD">c:\dev\flow\3.0\vendorsrc</Parameters>
 					</Parameters>
 					<VersionInfo>
 						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>

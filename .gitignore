@@ -2,3 +2,5 @@ __history
 *.cfg
 *.dcu
 *.exe
+*.identcache
+*.local

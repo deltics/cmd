@@ -43,7 +43,7 @@
 			<DelphiCompile Include="makemsg.dpr">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
-			<DCCReference Include="..\..\rtl\Deltics.StrUtils.pas"/>
+			<DCCReference Include="..\..\libs\rtl\Deltics.StrUtils.pas"/>
 			<None Include="test.dot.txt"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>

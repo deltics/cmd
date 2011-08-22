@@ -18,7 +18,7 @@ uses
   Classes,
   SysUtils,
 { deltics: }
-  Deltics.StrUtils in '..\..\rtl\Deltics.StrUtils.pas';
+  Deltics.StrUtils in '..\..\libs\rtl\Deltics.StrUtils.pas';
 
 var
   filename: String = '';

@@ -41,22 +41,32 @@ var
           if NOT optSimulated then
             DeleteFile(PChar(filename));
 
-          if optVerbose or optSimulated then
-          begin
-            Delete(filename, 1, 2); // Remove leading '.\'
+          if optVerbose then
             WriteLn(filename);
-          end;
         end;
       until FindNext(rec) <> 0;
+
     finally
       SysUtils.FindClose(rec);
     end;
   end;
 
 
+var
+  path: String;
 begin
-  WriteLn('VendorPrep');
-  WriteLn('(c) Copyright 2009 Flow Software');
+  if (ParamCount > 0) then
+  begin
+    path :=  GetCurrentDir + '\' + ParamStr(1);
+
+    if NOT DirectoryExists(path) then
+    begin
+      WriteLn('''' + path + ''' is not a valid folder path');
+      EXIT;
+    end;
+  end
+  else
+    path := GetCurrentDir;
 
   optInfo       := CommandLineContains('/?') or CommandLineContains('-?')
                     or CommandLineContains('-h');
@@ -67,9 +77,9 @@ begin
   begin
     WriteLn;
     WriteLn('Prepares a folder to receive a new drop of a vendor library by deleting');
-    WriteLn('all files and folders except those in any .svn folders.');
+    WriteLn('all files and folders EXCEPT those in any .svn folders.');
     WriteLn;
-    WriteLn('  USAGE:   vendorprep [-v] | [-s] | [-h | -? | /?]');
+    WriteLn('  USAGE:   vendorprep [path] [-v] | [-s] | [-h | -? | /?]');
     WriteLn;
     WriteLn('           -h, -?, /?  Displays this help/usage information');
     WriteLn;
@@ -81,12 +91,12 @@ begin
   end
   else
   begin
-    CleanFolder('.');
+    CleanFolder(path);
 
     WriteLn;
-    
+
     if optSimulated then
-      WriteLn(Format('%d file(s) would be deleted, in %d folder(s)', [iFiles, iFolders]))
+      WriteLn(Format('%d file(s) would be deleted in %d folder(s)', [iFiles, iFolders]))
     else
       WriteLn(Format('%d file(s) deleted in %d folder(s)', [iFiles, iFolders]));
   end;
