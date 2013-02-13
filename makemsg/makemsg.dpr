@@ -18,7 +18,13 @@ uses
   Classes,
   SysUtils,
 { deltics: }
-  Deltics.StrUtils in '..\..\libs\rtl\Deltics.StrUtils.pas';
+  Deltics.Memento in '..\..\libs\rtl\Deltics.Memento.pas',
+  Deltics.Streams in '..\..\libs\rtl\Deltics.Streams.pas',
+  Deltics.StrUtils in '..\..\libs\rtl\Deltics.StrUtils.pas',
+  Deltics.SysUtils in '..\..\libs\rtl\Deltics.SysUtils.pas',
+  Deltics.Types in '..\..\libs\rtl\Deltics.Types.pas',
+  Deltics.Unicode in '..\..\libs\rtl\Deltics.Unicode.pas',
+  Deltics.Windows in '..\..\libs\rtl\Deltics.Windows.pas';
 
 var
   filename: String = '';

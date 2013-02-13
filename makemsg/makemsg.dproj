@@ -43,7 +43,13 @@
 			<DelphiCompile Include="makemsg.dpr">
 				<MainSource>MainSource</MainSource>
 			</DelphiCompile>
+			<DCCReference Include="..\..\libs\rtl\Deltics.Memento.pas"/>
+			<DCCReference Include="..\..\libs\rtl\Deltics.Streams.pas"/>
 			<DCCReference Include="..\..\libs\rtl\Deltics.StrUtils.pas"/>
+			<DCCReference Include="..\..\libs\rtl\Deltics.SysUtils.pas"/>
+			<DCCReference Include="..\..\libs\rtl\Deltics.Types.pas"/>
+			<DCCReference Include="..\..\libs\rtl\Deltics.Unicode.pas"/>
+			<DCCReference Include="..\..\libs\rtl\Deltics.Windows.pas"/>
 			<None Include="test.dot.txt"/>
 			<BuildConfiguration Include="Base">
 				<Key>Base</Key>
@@ -59,7 +65,7 @@
 		</ItemGroup>
 		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
 		<PropertyGroup>
-			<PostBuildEvent><![CDATA[copy $(outputpath) c:\utils]]></PostBuildEvent>
+			<PostBuildEvent><![CDATA[copy $(outputpath) c:\cmd]]></PostBuildEvent>
 		</PropertyGroup>
 		<ProjectExtensions>
 			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
