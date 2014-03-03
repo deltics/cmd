@@ -50,7 +50,7 @@
         <DCC_K>false</DCC_K>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
-        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_Namespace>System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
         <PostBuildEvent><![CDATA[copy "$(outputpath)" c:\cmd
 $(PostBuildEvent)]]></PostBuildEvent>
         <Debugger_RunParams>test.dot.txt sub</Debugger_RunParams>
@@ -73,8 +73,11 @@ $(PostBuildEvent)]]></PostBuildEvent>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="..\..\libs\rtl\Deltics.Classes.pas"/>
         <DCCReference Include="..\..\libs\rtl\Deltics.Memento.pas"/>
+        <DCCReference Include="..\..\libs\rtl\Deltics.Multicast.pas"/>
         <DCCReference Include="..\..\libs\rtl\Deltics.Streams.pas"/>
+        <DCCReference Include="..\..\libs\rtl\Deltics.Strings.pas"/>
         <DCCReference Include="..\..\libs\rtl\Deltics.StrUtils.pas"/>
         <DCCReference Include="..\..\libs\rtl\Deltics.SysUtils.pas"/>
         <DCCReference Include="..\..\libs\rtl\Deltics.Types.pas"/>

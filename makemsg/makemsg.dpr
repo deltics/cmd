@@ -18,8 +18,11 @@ uses
   Classes,
   SysUtils,
 { deltics: }
+  Deltics.Classes in '..\..\libs\rtl\Deltics.Classes.pas',
   Deltics.Memento in '..\..\libs\rtl\Deltics.Memento.pas',
+  Deltics.Multicast in '..\..\libs\rtl\Deltics.Multicast.pas',
   Deltics.Streams in '..\..\libs\rtl\Deltics.Streams.pas',
+  Deltics.Strings in '..\..\libs\rtl\Deltics.Strings.pas',
   Deltics.StrUtils in '..\..\libs\rtl\Deltics.StrUtils.pas',
   Deltics.SysUtils in '..\..\libs\rtl\Deltics.SysUtils.pas',
   Deltics.Types in '..\..\libs\rtl\Deltics.Types.pas',
